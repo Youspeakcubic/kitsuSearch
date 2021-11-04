@@ -8,24 +8,24 @@ window.onload = (event) => {
     .then(response => response.json())
     .then(data => console.log(data))
   console.log("Trending Anime loaded")
-
-document.getElementById("searchButton").addEventListener("click", function() {
-  query = document.getElementById("searchTerm").value
-  console.log(query);
-  console.log(`${baseUrl}/anime?filter[text]=${query}`);
-  return fetchQuery();
-
-});
-let fetchQuery = () => {
-  console.log(`${query}`);
-  return fetch(`${baseUrl}/anime?filter[text]=${query}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/vnd.api+json',
-        'Accept': 'application/vnd.api+json',
-      }
-    })
-    .then(response => response.json())
-    .then(data => console.log(data))
-};
 }
+document.getElementById("searchButton").addEventListener("click", function() {
+  query = document.getElementById("searchTerm");
+  console.log(query);
+  var url = new URL("https://kitsu.io/api/edge/anime?filter[text]="),{
+      parameters: {q: query},
+      method:'GET',
+      mode:'cors',
+      headers:{
+        Accept: 'application/vnd.api+json',
+        Content-Type : 'application/vnd.api+json'
+      },
+
+    }
+    Object.keys(params).forEach(key => url.searchParams.append(key, params[key]))
+    //we are appending the parameters to the url we defined to create a new url with our user inputted and static parameters.
+  fetch(url)
+    //once we fetch, we then take that response and parse it into json, we then use our callback for processing our data ( distribute() )
+    .then(response => response.json())
+    .then (data => console.log(data))
+  });
