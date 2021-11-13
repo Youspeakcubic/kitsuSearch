@@ -1,0 +1,21 @@
+html{
+  background-color: lightGrey;
+}
+.gridCont{
+  display:grid;
+  grid-template-areas:
+  'side main main main main'
+  'side main main main main'
+  'side main main main main';
+  grid-gap: 1vw;
+  padding:10px;
+}
+.queryForm{
+  grid-area: side;
+}
+.mainCont{
+  grid-area: main;
+}
+.animeContainer{
+  display:block;
+}

@@ -2,8 +2,8 @@ let topUrl = "https://api.jikan.moe/v3/top/anime";
 //on load event listener
 window.onload = (event) => {
   fetch(topUrl)
-  .then (response => response.json())
-  .then (response => console.log(response))
+    .then(response => response.json())
+    .then(response => console.log(response))
 }
 let fetchQuery = () => {
   let query = document.getElementById('searchTerm').value;
@@ -21,8 +21,4 @@ let fetchQuery = () => {
       .then(response => response.json())
       .then(data => processQuery(data))
   }
-}
-
-let processQuery = (results) => {
-  console.log(results);
 }
