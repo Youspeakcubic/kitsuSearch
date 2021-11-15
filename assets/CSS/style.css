@@ -15,6 +15,8 @@ html{
 }
 .mainCont{
   grid-area: main;
+  overflow-y: scroll;
+  height: 100%;
 }
 .animeContainer{
   display:block;

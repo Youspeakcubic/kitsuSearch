@@ -1,20 +1,33 @@
-//declaring create elements to add the data to our website later.
-let container = document.getElementById('mainCont');
-const newDiv = document.createElement("div");
-newDiv.className = "animeContainer"
-const newH1 = document.createElement("h1");
-const newP = document.createElement("p");
-const newImg = document.createElement("img")
+container = document.getElementById("mainCont");
 //this function just gets each array item or anime and then sends it to the process object function.
 let processQuery = (data) => {
-    let results = data.results;
-    results.forEach(element => processObject(element));
-};
-//process object is responsible for using each of the anime objects and creating elements containing the data and appending it to our main container on our site.
-let processObject = (anime) => {
- const createTitle = document.createTextNode(anime.title);
- newH1.appendChild(createTitle);
- newDiv.appendChild(createTitle)
- container.appendChild(newDiv);
 
-}
+  container.innerHTML = "";
+  let animeHeader = document.createElement("h1");
+  animeHeader.appendChild(document.createTextNode(`Search results for "${document.getElementById('searchTerm').value}":`));
+  animeHeader.className = "animeHeader";
+  container.appendChild(animeHeader);
+
+  let results = data.results;
+  for (let i = 0; i < results.length; i++) {
+    processObject(results[i]);
+  }
+};
+let processObject = (anime) => {
+  //object containing all the create elements needed to make the div containing each anime for the sake of cleanliness.
+  let createElement = {
+    newDiv: document.createElement("div"),
+    newH3: document.createElement("h3"),
+    newP: document.createElement("p"),
+    newImg: document.createElement("img")
+  };
+  createElement.newDiv.className = "animeContainer";
+  createElement.newP.className = "animeTitle";
+  createElement.newImg.src = anime.image_url;
+  createElement.newH3.appendChild(document.createTextNode(anime.title));
+  createElement.newP.appendChild(document.createTextNode(anime.synopsis));
+  createElement.newDiv.appendChild(createElement.newImg);
+  createElement.newDiv.appendChild(createElement.newH3);
+  createElement.newDiv.appendChild(createElement.newP);
+  return container.appendChild(createElement.newDiv)
+};
