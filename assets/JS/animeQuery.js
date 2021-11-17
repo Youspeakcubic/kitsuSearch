@@ -3,7 +3,7 @@ let topUrl = "https://api.jikan.moe/v3/top/anime";
 window.onload = (event) => {
   fetch(topUrl)
     .then(response => response.json())
-    .then(response => console.log(response))
+    .then(data => processTrending(data))
 }
 let fetchQuery = () => {
   let query = document.getElementById('searchTerm').value;
