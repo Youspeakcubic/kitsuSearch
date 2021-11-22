@@ -21,3 +21,59 @@ html{
 .animeContainer{
   display:block;
 }
+/*  trending anime carousel */
+section img {
+  display: block;
+  width: 50%;
+}
+section {
+  width: 100%;
+  overflow: hidden;
+  background-color: #BE6F37;
+  box-shadow: 0 -5px 40px -5px #FEA90B;
+  text-align: center;
+}
+article {
+  display: flex;
+  width: 200%;
+  animation: bannermove 20s linear infinite;
+}
+
+article.paused {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+section div {
+  width: 100%;
+}
+
+section ul {
+  display: flex;
+  background: #BE6F37;
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+section li {
+  width: 80%;
+  background: #BE6F37;
+}
+
+section li:nth-child(2) {
+  background: #BE6F37;
+}
+
+section li:nth-child(3) {
+  background: #BE6F37;
+}
+
+@keyframes "bannermove" {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

@@ -1,18 +1,28 @@
 let processTrending = (data) =>{
   let results = data.top;
   console.log(results);
-  for (let i = 0; i < results.length; i++) {
+  for (let i = 0; i < 12; i++) {
     processTrendObject(results[i]);
   }
 };
 let processTrendObject = (anime) => {
+  let container;
+  console.log(container);
   //object containing all the create elements needed to make the div containing each anime for the sake of cleanliness.
   let createElement = {
-    newDiv: document.createElement("div"),
+    newDiv: document.createElement("Li"),
     newH3: document.createElement("h3"),
     newP: document.createElement("p"),
     newImg: document.createElement("img")
   };
+  if(anime.rank % 2 == 0) {
+    console.log("even");
+    container = document.getElementById("animeCaro1")
+
+  } else {
+    container = document.getElementById("animeCaro2");
+  }
+  console.log(container);
   createElement.newDiv.className = "animeContainer";
   createElement.newP.className = "animeTitle";
   createElement.newImg.src = anime.image_url;
