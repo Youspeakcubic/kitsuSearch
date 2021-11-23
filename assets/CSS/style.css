@@ -24,13 +24,15 @@ html{
 /*  trending anime carousel */
 section img {
   display: block;
-  width: 50%;
+  width: 200px;
+  height:400px;
+  margin: .25vw;
 }
 section {
   width: 100%;
   overflow: hidden;
-  background-color: #BE6F37;
-  box-shadow: 0 -5px 40px -5px #FEA90B;
+  background-color: white;
+  box-shadow: 0 -5px 40px -5px grey;
   text-align: center;
 }
 article {
@@ -50,7 +52,7 @@ section div {
 
 section ul {
   display: flex;
-  background: #BE6F37;
+  background: white;
   list-style-type: none;
   padding-left: 0;
   margin: 0;
@@ -58,15 +60,15 @@ section ul {
 
 section li {
   width: 80%;
-  background: #BE6F37;
+  background: white;
 }
 
 section li:nth-child(2) {
-  background: #BE6F37;
+  background: white;
 }
 
 section li:nth-child(3) {
-  background: #BE6F37;
+  background: white;
 }
 
 @keyframes "bannermove" {

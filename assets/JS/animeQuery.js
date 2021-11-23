@@ -1,9 +1,13 @@
 let topUrl = "https://api.jikan.moe/v3/top/anime";
+let seasonUrl = "https://api.jikan.moe/v3/season"
 //on load event listener
 window.onload = (event) => {
   fetch(topUrl)
     .then(response => response.json())
     .then(data => processTrending(data))
+  fetch(seasonUrl)
+    .then(response => response.json())
+    .then(data => processSeason(data))
 }
 let fetchQuery = () => {
   let query = document.getElementById('searchTerm').value;
