@@ -1,7 +1,6 @@
 container = document.getElementById("mainCont");
 //this function just gets each array item or anime and then sends it to the process object function.
 let processQuery = (data) => {
-
   container.innerHTML = "";
   let animeHeader = document.createElement("h1");
   animeHeader.appendChild(document.createTextNode(`Search results for "${document.getElementById('searchTerm').value}":`));

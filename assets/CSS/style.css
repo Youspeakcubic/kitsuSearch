@@ -1,6 +1,7 @@
 html{
   background-color: lightGrey;
 }
+/*grid settings (splits page into two segments occupying about 80/20 percent respectively)*/
 .gridCont{
   display:grid;
   grid-template-areas:

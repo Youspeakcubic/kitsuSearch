@@ -9,6 +9,7 @@ let processTrendObject = (anime) => {
   let container;
   //object containing all the create elements needed to make the div containing each anime for the sake of cleanliness.
   let createElement = {
+    newA : document.createElement("a"),
     newDiv: document.createElement("Li"),
     newH3: document.createElement("h3"),
     newP: document.createElement("p"),
@@ -22,11 +23,11 @@ let processTrendObject = (anime) => {
     container = document.getElementById("animeCaro2");
   }
   createElement.newDiv.className = "animeContainer";
-  createElement.newP.className = "animeTitle";
   createElement.newImg.src = anime.image_url;
   createElement.newH3.appendChild(document.createTextNode(anime.title));
   createElement.newDiv.appendChild(createElement.newImg);
   createElement.newDiv.appendChild(createElement.newH3);
-  createElement.newDiv.appendChild(createElement.newP);
-  return container.appendChild(createElement.newDiv)
+  createElement.newA.setAttribute("href", anime.url);
+  createElement.newA.appendChild(createElement.newDiv);
+  return container.appendChild(createElement.newA)
 };

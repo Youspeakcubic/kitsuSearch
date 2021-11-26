@@ -2,7 +2,7 @@ let processSeason = (data) =>{
   console.log(data);
   let results = data.anime;
   console.log("seasonLoaded");
-  for (let i = 0; i < results.length; i++) {
+  for (let i = 0; i < 15; i++) {
     processSeasonObject(results[i]);
   }
 };

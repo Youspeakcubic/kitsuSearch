@@ -9,14 +9,16 @@ window.onload = (event) => {
     .then(response => response.json())
     .then(data => processSeason(data))
 }
-let fetchQuery = () => {
+let fetchQuery = (pageNum) => {
   let query = document.getElementById('searchTerm').value;
   if (!query) {
 
   } else {
     var baseUrl = new URL("https://api.jikan.moe/v3/search/anime?q="),
       params = {
-        q: query
+        q: query,
+        page: pageNum,
+        limit:10
       }
     Object.keys(params).forEach(key => baseUrl.searchParams.append(key, params[key]))
     //we are appending the parameters to the url we defined to create a new url with our user inputted and static parameters.
