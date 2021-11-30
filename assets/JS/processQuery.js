@@ -30,3 +30,4 @@ let processObject = (anime) => {
   createElement.newDiv.appendChild(createElement.newP);
   return container.appendChild(createElement.newDiv)
 };
+document.getElementById("paginationQuery").style.display = "block";

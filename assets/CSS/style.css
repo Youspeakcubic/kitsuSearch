@@ -80,3 +80,9 @@ section li:nth-child(3) {
     transform: translateX(-50%);
   }
 }
+#paginationQuery{
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left:50%;
+}
