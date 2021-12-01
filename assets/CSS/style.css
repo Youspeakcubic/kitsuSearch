@@ -86,3 +86,16 @@ section li:nth-child(3) {
   bottom: 0;
   left:50%;
 }
+/* collapse menu styling*/
+.mainCont{
+  animation: collapseMenu 10s linear;
+}
+@@keyframes collapseMenu {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+
+}
