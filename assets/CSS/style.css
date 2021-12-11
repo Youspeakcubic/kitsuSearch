@@ -1,5 +1,6 @@
 html{
   background-color: #F5F1E3;
+  margin:0;
 }
 h1{
   font-family: 'Montserrat', sans-serif;
@@ -18,33 +19,41 @@ a{
   color:#050505;
   font-family: 'Baloo Bhaijaan 2', cursive;
 }
-#searchButton{
-  background-color: #1b9aaa;
-}
 div{
   background-color: #F5F1E3;
 }
 /*grid settings (splits page into two segments occupying about 80/20 percent respectively)*/
 .gridCont{
+  margin:0;
   display:grid;
   grid-template-areas:
   'side main main main main'
   'side main main main main'
   'side main main main main';
   grid-gap: 1vw;
-  padding:10px;
-  background-color: #f5f1e3;
+  background-color: #DDDBCB;
 }
 .queryForm{
   grid-area: side;
   padding:20px;
   margin:0;
   border-right: 2px solid #1b9aaa;
+  background-color: #1b9aaa;
+}
+.form-group{
+    background-color: #1b9aaa;
+}
+label{
+    font-family: 'Montserrat', sans-serif;
+}
+small{
+  font-family: 'Baloo Bhaijaan 2', cursive;
 }
 .mainCont{
   grid-area: main;
   overflow-y: scroll;
   height: 100%;
+  background-color: #DDDBCB;
 }
 /*  trending anime carousel */
 section img {
@@ -100,6 +109,9 @@ section li:nth-child(3) {
 }
 .animeCaro2{
     background-color: #dddbcb;
+}
+.animeContainer{
+  padding: 15px 30px;
 }
 
 @keyframes "bannermove" {

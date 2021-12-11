@@ -21,7 +21,7 @@ let processTrendObject = (anime) => {
   } else {
     container = document.getElementById("animeCaro2");
   }
-  createElement.newDiv.className = "animeContainer";
+  createElement.newDiv.className = "trendingContainer";
   createElement.newA.className = "animeTag";
   createElement.newImg.src = anime.image_url;
   createElement.newH3.appendChild(document.createTextNode(anime.title));
