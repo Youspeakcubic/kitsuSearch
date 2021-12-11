@@ -1,5 +1,28 @@
 html{
-  background-color: lightGrey;
+  background-color: #F5F1E3;
+}
+h1{
+  font-family: 'Montserrat', sans-serif;
+}
+h2{
+  font-family: 'Baloo Bhaijaan 2', cursive;
+}
+h3{
+  font-family: 'Baloo Bhaijaan 2', cursive;
+  background-color: #F5F1E3;
+}
+p{
+  font-family: 'Baloo Bhaijaan 2', cursive;
+}
+a{
+  color:#050505;
+  font-family: 'Baloo Bhaijaan 2', cursive;
+}
+#searchButton{
+  background-color: #1b9aaa;
+}
+div{
+  background-color: #F5F1E3;
 }
 /*grid settings (splits page into two segments occupying about 80/20 percent respectively)*/
 .gridCont{
@@ -10,17 +33,18 @@ html{
   'side main main main main';
   grid-gap: 1vw;
   padding:10px;
+  background-color: #f5f1e3;
 }
 .queryForm{
   grid-area: side;
+  padding:20px;
+  margin:0;
+  border-right: 2px solid #1b9aaa;
 }
 .mainCont{
   grid-area: main;
   overflow-y: scroll;
   height: 100%;
-}
-.animeContainer{
-  display:block;
 }
 /*  trending anime carousel */
 section img {
@@ -32,7 +56,6 @@ section img {
 section {
   width: 100%;
   overflow: hidden;
-  background-color: white;
   box-shadow: 0 -5px 40px -5px grey;
   text-align: center;
 }
@@ -53,7 +76,7 @@ section div {
 
 section ul {
   display: flex;
-  background: white;
+  background: #dddbcb;
   list-style-type: none;
   padding-left: 0;
   margin: 0;
@@ -71,6 +94,13 @@ section li:nth-child(2) {
 section li:nth-child(3) {
   background: white;
 }
+/* anime slideshow individual item styling */
+.animeCaro1{
+  background-color: #dddbcb;
+}
+.animeCaro2{
+    background-color: #dddbcb;
+}
 
 @keyframes "bannermove" {
   0% {
@@ -81,10 +111,12 @@ section li:nth-child(3) {
   }
 }
 #paginationQuery{
-  display: none;
   position: fixed;
   bottom: 0;
   left:50%;
+}
+.pagination{
+  display:none;
 }
 /* collapse menu styling*/
 .mainCont{

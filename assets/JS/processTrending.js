@@ -16,17 +16,17 @@ let processTrendObject = (anime) => {
     newImg: document.createElement("img")
   };
   if(anime.rank % 2 == 0) {
-    console.log("even");
     container = document.getElementById("animeCaro1")
 
   } else {
     container = document.getElementById("animeCaro2");
   }
   createElement.newDiv.className = "animeContainer";
+  createElement.newA.className = "animeTag";
   createElement.newImg.src = anime.image_url;
   createElement.newH3.appendChild(document.createTextNode(anime.title));
   createElement.newDiv.appendChild(createElement.newImg);
-  createElement.newDiv.appendChild(createElement.newH3);
+  // createElement.newDiv.appendChild(createElement.newH3);
   createElement.newA.setAttribute("href", anime.url);
   createElement.newA.appendChild(createElement.newDiv);
   return container.appendChild(createElement.newA)
