@@ -1,4 +1,4 @@
-let processSeason = (data) =>{
+let processSeason = (data) => {
   console.log(data);
   let results = data.anime;
   console.log("seasonLoaded");
@@ -14,16 +14,15 @@ let processSeasonObject = (anime) => {
     newDiv: document.createElement("div"),
     newH3: document.createElement("h3"),
     newP: document.createElement("p"),
-    newImg: document.createElement("img")
+    newImg: document.createElement("img"),
   };
-  console.log(container);
   createElement.newDiv.className = "animeContainer";
   createElement.newP.className = "animeTitle";
   createElement.newImg.src = anime.image_url;
-  createElement.newH3.appendChild(document.createTextNode(anime.title));
+  createElement.newH3.appendChild(document.createTextNode(`${anime.title}`));
   createElement.newP.appendChild(document.createTextNode(anime.synopsis));
-  createElement.newDiv.appendChild(createElement.newImg);
   createElement.newDiv.appendChild(createElement.newH3);
   createElement.newDiv.appendChild(createElement.newP);
+  createElement.newDiv.appendChild(createElement.newImg);
   return container.appendChild(createElement.newDiv)
 };

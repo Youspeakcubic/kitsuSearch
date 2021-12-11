@@ -11,13 +11,20 @@ h2{
 h3{
   font-family: 'Baloo Bhaijaan 2', cursive;
   background-color: #F5F1E3;
+  float: right;
 }
 p{
   font-family: 'Baloo Bhaijaan 2', cursive;
+  float: right;
+  width:70%;
+  font-size: 1vw;
 }
 a{
   color:#050505;
   font-family: 'Baloo Bhaijaan 2', cursive;
+}
+img{
+
 }
 div{
   background-color: #F5F1E3;
@@ -112,8 +119,8 @@ section li:nth-child(3) {
 }
 .animeContainer{
   padding: 15px 30px;
-}
 
+}
 @keyframes "bannermove" {
   0% {
     transform: translateX(0);
