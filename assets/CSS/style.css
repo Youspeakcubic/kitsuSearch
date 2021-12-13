@@ -10,13 +10,12 @@ h2{
 }
 h3{
   font-family: 'Baloo Bhaijaan 2', cursive;
+  float:right;
   background-color: #F5F1E3;
-  float: right;
 }
 p{
   font-family: 'Baloo Bhaijaan 2', cursive;
   float: right;
-  width:70%;
   font-size: 1vw;
 }
 a{
@@ -24,7 +23,7 @@ a{
   font-family: 'Baloo Bhaijaan 2', cursive;
 }
 img{
-
+float:left;
 }
 div{
   background-color: #F5F1E3;
@@ -119,7 +118,15 @@ section li:nth-child(3) {
 }
 .animeContainer{
   padding: 15px 30px;
-
+  margin-right: 20px;
+  height:13%;
+}
+.AnimeTextContainer{
+  float: right;
+  width: 80%;
+}
+.animeTitle{
+  float: right;
 }
 @keyframes "bannermove" {
   0% {
