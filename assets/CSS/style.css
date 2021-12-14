@@ -1,6 +1,8 @@
 html{
   background-color: #F5F1E3;
   margin:0;
+  scroll-behavior: smooth;
+  overflow-y: visible;
 }
 h1{
   font-family: 'Montserrat', sans-serif;
@@ -12,6 +14,7 @@ h3{
   font-family: 'Baloo Bhaijaan 2', cursive;
   float:right;
   background-color: #F5F1E3;
+  color: #1b9aaa;
 }
 p{
   font-family: 'Baloo Bhaijaan 2', cursive;
@@ -24,6 +27,7 @@ a{
 }
 img{
 float:left;
+border: 2px solid #1b9aaa;
 }
 div{
   background-color: #F5F1E3;
@@ -45,6 +49,7 @@ div{
   margin:0;
   border-right: 2px solid #1b9aaa;
   background-color: #1b9aaa;
+  overflow-y: hidden;
 }
 .form-group{
     background-color: #1b9aaa;
@@ -57,7 +62,7 @@ small{
 }
 .mainCont{
   grid-area: main;
-  overflow-y: scroll;
+  overflow-y: hidden;
   height: 100%;
   background-color: #DDDBCB;
 }
@@ -124,9 +129,6 @@ section li:nth-child(3) {
 .AnimeTextContainer{
   float: right;
   width: 80%;
-}
-.animeTitle{
-  float: right;
 }
 @keyframes "bannermove" {
   0% {
