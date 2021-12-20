@@ -20,7 +20,7 @@ let processObject = (anime) => {
     newP: document.createElement("p"),
     newImg: document.createElement("img")
   };
-  createElement.newDiv.className = "animeContainer";
+  createElement.newDiv.className = "queryContainer";
   createElement.newP.className = "animeTitle";
   createElement.newImg.src = anime.image_url;
   createElement.newH3.appendChild(document.createTextNode(anime.title));

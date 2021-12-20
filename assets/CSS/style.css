@@ -167,7 +167,9 @@ section li:nth-child(3) {
   height: 25%;
   display: block;
 }
-
+.queryContainer{
+  padding: 5px 30px 100px;
+}
 .AnimeTextContainer {
   float: right;
   width: 80%;
