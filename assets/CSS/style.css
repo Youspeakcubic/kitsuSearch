@@ -23,7 +23,8 @@ h3 {
 p {
   font-family: 'Baloo Bhaijaan 2', cursive;
   float: right;
-  font-size: 1vw;
+  font-size: 1.5vw;
+  width:100%;
 }
 
 a {
@@ -200,6 +201,12 @@ section li:nth-child(3) {
 
 #seasonCont3 {
   display: none;
+}
+
+/* pagination after query styling */
+
+#paginationQuery2{
+  display:none;
 }
 
 /* collapse menu styling*/

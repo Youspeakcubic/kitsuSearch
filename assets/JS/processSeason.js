@@ -1,27 +1,21 @@
 let processSeason = (data) => {
-  console.log(data);
   let results = data.anime;
-  console.log("seasonLoaded");
   for (let i = 0; i < 15; i++) {
-    console.log(i)
     if (i <= 4){
     processSeasonObject(results[i], document.getElementById("seasonCont1"));
-    console.log("1")
     }
     else if (i >= 5 && i <= 10) {
       processSeasonObject(results[i], document.getElementById("seasonCont2"))
-      console.log("2")
     }
     else if (i >= 10) {
       processSeasonObject(results[i], document.getElementById("seasonCont3"))
-      console.log("3")
     }
   }
 };
 let processSeasonObject = (anime, domElement) => {
-  console.log(domElement)
   //object containing all the create elements needed to make the div containing each anime for the sake of cleanliness.
   let createElement = {
+    newA : document.createElement("a"),
     newDiv: document.createElement("div"),
     textContainer: document.createElement("div"),
     newH3: document.createElement("h3"),
@@ -38,5 +32,7 @@ let processSeasonObject = (anime, domElement) => {
   createElement.textContainer.appendChild(createElement.newP);
   createElement.newDiv.appendChild(createElement.newImg);
   createElement.newDiv.appendChild(createElement.textContainer);
-  return domElement.appendChild(createElement.newDiv)
+  createElement.newA.setAttribute("href", anime.url);
+  createElement.newA.appendChild(createElement.newDiv);
+  return domElement.appendChild(createElement.newA)
 };

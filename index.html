@@ -6,8 +6,8 @@
   <link rel="stylesheet" href="assets\CSS\style.css" />
   <meta charset="utf-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Montserrat:ital,wght@1,900&display=swap" rel="stylesheet">
   <title>Trending animes powered by Jikan</title>
 </head>
 
@@ -29,25 +29,27 @@
       <!-- <button id="collapseMenu" onclick="collapseMenu()" class="btn btn-dark">Collapse</button> -->
     </div>
     <div class="mainCont" id="mainCont">
-      <h1 id="mainHeader">Trending Anime:</h1>
+      <div class="landingCont">
+        <h1 id="mainHeader">Trending Anime:</h1>
 
-      <section id="skillsCaro">
-        <article>
-          <div>
-            <ul id="animeCaro1">
-            </ul>
-          </div>
-          <div>
-            <ul id="animeCaro2">
-            </ul>
-          </div>
-        </article>
-      </section>
-      <hr />
-      <h1>Popular anime this season:</h>
-        <div id="seasonCont1"></div>
-        <div id="seasonCont2"></div>
-        <div id="seasonCont3"></div>
+        <section id="skillsCaro">
+          <article>
+            <div>
+              <ul id="animeCaro1">
+              </ul>
+            </div>
+            <div>
+              <ul id="animeCaro2">
+              </ul>
+            </div>
+          </article>
+        </section>
+        <hr />
+        <h1>Popular anime this season:</h>
+          <div id="seasonCont1"></div>
+          <div id="seasonCont2"></div>
+          <div id="seasonCont3"></div>
+      </div>
     </div>
     <nav id="paginationQuery" aria-label="Page navigation example">
       <ul class="pagination" id="paginationQuery">
@@ -63,6 +65,25 @@
         <li class="page-item">
           <a class="page-link" aria-label="Next">
             <span aria-hidden="true" onclick="pagination('next')">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <nav id="paginationQuery2" aria-label="Page navigation example">
+      <ul class="pagination" id="paginationQuery">
+        <li class="page-item">
+          <a class="page-link" aria-label="Previous">
+            <span aria-hidden="true" onclick="fetch('previous')">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        <li class="page-item"><a class="page-link" onclick="fetchQuery(1)">1</a></li>
+        <li class="page-item"><a class="page-link" onclick="fetchQuery(2)">2</a></li>
+        <li class="page-item"><a class="page-link" onclick="fetchQuery(3)">3</a></li>
+        <li class="page-item">
+          <a class="page-link" aria-label="Next">
+            <span aria-hidden="true" onclick="fetchQuery('next')">&raquo;</span>
             <span class="sr-only">Next</span>
           </a>
         </li>

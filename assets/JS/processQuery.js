@@ -13,8 +13,11 @@ let processQuery = (data) => {
   }
 };
 let processObject = (anime) => {
+  document.getElementById("paginationQuery").style.display = "none";
+  document.getElementById("paginationQuery2").style.display = "block";
   //object containing all the create elements needed to make the div containing each anime for the sake of cleanliness.
   let createElement = {
+    newA : document.createElement("a"),
     newDiv: document.createElement("div"),
     newH3: document.createElement("h3"),
     newP: document.createElement("p"),
@@ -28,5 +31,7 @@ let processObject = (anime) => {
   createElement.newDiv.appendChild(createElement.newImg);
   createElement.newDiv.appendChild(createElement.newH3);
   createElement.newDiv.appendChild(createElement.newP);
-  return container.appendChild(createElement.newDiv)
+  createElement.newA.setAttribute("href", anime.url);
+  createElement.newA.appendChild(createElement.newDiv);
+  return container.appendChild(createElement.newA)
 };

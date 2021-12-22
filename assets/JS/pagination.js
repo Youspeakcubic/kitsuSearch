@@ -23,7 +23,6 @@ let pagination = (num) => {
     else {
     console.log("prev");
     document.getElementById(`seasonCont${current_num - 1}`).style.display="block";
-    console.log(`seasonCont${current_num - 1}`);
     document.getElementById(`seasonCont${current_num }`).style.display="none";
     current_num--;
     }
@@ -31,7 +30,6 @@ let pagination = (num) => {
   else if (num == 'next') {
     if (current_num >= 3) { current_num = 3 }
     else {
-    console.log("page3");
     document.getElementById(`seasonCont${current_num + 1}`).style.display="block";
     document.getElementById(`seasonCont${current_num}`).style.display="none";
     current_num++;
