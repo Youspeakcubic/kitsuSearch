@@ -174,7 +174,11 @@ section li:nth-child(3) {
 .AnimeTextContainer {
   float: right;
   width: 80%;
-  padding: 15px 5px 100px 5px;
+  overflow: auto;
+  white-space: nowrap;
+  text-overflow:clip;
+  display: block;
+  overflow: hidden;
 }
 
 @keyframes "bannermove" {
